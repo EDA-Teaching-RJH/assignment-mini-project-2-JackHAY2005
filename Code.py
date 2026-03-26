@@ -13,7 +13,8 @@ def display_menu():
     print("6. Filter by Nationality")
     print("7. Calculate Total Value")
     print("8. Count World-Class Players")
-    print("9. Exit")
+    print("9. One on One")
+    print("10. Exit")
 
 def display_roster(i, p, n):
         print("Viewing Database...")
@@ -87,6 +88,22 @@ def count_World_Class_Players(i, v):
             count += 1
     print("Number of World-Class Players: " + str(count))
 
+def one_on_one(i, p, n):
+    print("One on One...")
+    player1 = input("Player 1 Name: ")
+    player2 = input("Player 2 Name: ")
+
+    if player1 in i and player2 in i:
+        index1 = i.index(player1)
+        index2 = i.index(player2)
+
+        if v[index1] > v[index2]:
+            print(player1 + " dribbles past " + player2 + " and scores!")
+        elif v[index1] < v[index2]:
+            print(player2 + " dribbles past " + player1 + " and scores!")
+    else:
+        print("One or both players not found.")
+    
 def run_system():
     print("BOOTING SYSTEM...")
     print("...")
@@ -117,6 +134,8 @@ def run_system():
         elif opt == "8":
             count_World_Class_Players(i, v)
         elif opt == "9":
+            one_on_one(i, p, n)
+        elif opt == "10":
             print("Exiting system...")
             break
         else:
