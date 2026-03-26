@@ -11,10 +11,21 @@ def display_menu():
     print("5. Search Player")
     print("6. Filter by Nationality")
     print("7. Calculate Total Value")
-    print("9. Exit")
+    print("8. Exit")
 display_menu()
 
 def display_roster(i, p, n):
         print("Viewing Database...")
         for j in range(len(i)):
             print(i[j] + " - " + p[j] + " - " + n[j])
+
+def add_player(i, p, n):
+    print("Adding Player...")
+    new_name = input("Name: ")
+    new_position = input("Position: ")
+    new_nationality = input("Nationality: ")
+    i.append(new_name)
+    p.append(new_position)
+    n.append(new_nationality)
+
+
