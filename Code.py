@@ -12,7 +12,8 @@ def display_menu():
     print("5. Search Player")
     print("6. Filter by Nationality")
     print("7. Calculate Total Value")
-    print("8. Exit")
+    print("8. Count World-Class Players")
+    print("9. Exit")
 display_menu()
 
 def display_roster(i, p, n):
@@ -78,3 +79,11 @@ total_value = 0
 for value in v:
     total_value += value
 print("Total Value: " + str(total_value) + " million pounds")
+
+def count_World_Class_Players(i, v):
+    print("Counting World-Class Players...")
+    count = 0
+    for j in range(len(i)):
+        if v[j] >= 60:
+            count += 1
+    print("Number of World-Class Players: " + str(count))
