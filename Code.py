@@ -28,4 +28,15 @@ def add_player(i, p, n):
     p.append(new_position)
     n.append(new_nationality)
 
+def remove_player(i, p, n):
+    print("Removing Player...")
+    name_to_remove = input("Name: ")
+    if name_to_remove in i:
+        index = i.index(name_to_remove)
+        i.pop(index)
+        p.pop(index)
+        n.pop(index)
+    else:
+        print("Player not found.")
+
 
