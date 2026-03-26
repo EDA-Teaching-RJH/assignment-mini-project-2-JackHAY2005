@@ -14,7 +14,6 @@ def display_menu():
     print("7. Calculate Total Value")
     print("8. Count World-Class Players")
     print("9. Exit")
-display_menu()
 
 def display_roster(i, p, n):
         print("Viewing Database...")
@@ -74,11 +73,11 @@ def filter_by_nationality(i, p, n):
             print(i[j] + " - " + p[j]) 
 
 def calculate_total_value(i):
-print("Calculating Total Value...")
-total_value = 0
-for value in v:
-    total_value += value
-print("Total Value: " + str(total_value) + " million pounds")
+    print("Calculating Total Value...")
+    total_value = 0
+    for value in v:
+        total_value += value
+    print("Total Value: " + str(total_value) + " million pounds")
 
 def count_World_Class_Players(i, v):
     print("Counting World-Class Players...")
@@ -87,3 +86,39 @@ def count_World_Class_Players(i, v):
         if v[j] >= 60:
             count += 1
     print("Number of World-Class Players: " + str(count))
+
+def run_system():
+    print("BOOTING SYSTEM...")
+    print("...")
+    print("WELCOME TO THE FOOTBALL PLAYER DATABASE SYSTEM!")
+
+    loading = 0
+    while loading < 10:
+        loading += 1 # loop was not finished
+        print("Loading module " + str(loading))
+
+    while True:
+        display_menu()
+        opt = input("Select option: ")
+        if opt == "1": 
+            display_roster(i, p, n)
+        elif opt == "2":
+            add_player(i, p, n)
+        elif opt == "3":
+            remove_player(i, p, n)
+        elif opt == "4":
+            update_position(i, p)
+        elif opt == "5":
+            search_player(i, p, n)
+        elif opt == "6":
+            filter_by_nationality(i, p, n)
+        elif opt == "7":
+            calculate_total_value(i)
+        elif opt == "8":
+            count_World_Class_Players(i, v)
+        elif opt == "9":
+            print("Exiting system...")
+            break
+        else:
+            print("Invalid option. Please try again.")
+run_system()
