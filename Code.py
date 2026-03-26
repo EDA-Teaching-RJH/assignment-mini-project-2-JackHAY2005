@@ -14,7 +14,8 @@ def display_menu():
     print("7. Calculate Total Value")
     print("8. Count World-Class Players")
     print("9. One on One")
-    print("10. Exit")
+    print("10. Create Starting Lineup")
+    print("11. Exit")
 
 def display_roster(i, p, n):
         print("Viewing Database...")
@@ -103,7 +104,18 @@ def one_on_one(i, p, n):
             print(player2 + " dribbles past " + player1 + " and scores!")
     else:
         print("One or both players not found.")
-    
+
+def create_starting_lineup(i, p, n):
+    print("Creating Starting Lineup...")
+    lineup = []
+    for j in range(11):
+        player_name = input("Player " + str(j+1) + " Name: ")
+        if player_name in i:
+            lineup.append(player_name)
+        else:
+            print("Player not found. Please try again.")
+            return
+
 def run_system():
     print("BOOTING SYSTEM...")
     print("...")
@@ -136,6 +148,8 @@ def run_system():
         elif opt == "9":
             one_on_one(i, p, n)
         elif opt == "10":
+            create_starting_lineup(i, p, n)
+        elif opt == "11":
             print("Exiting system...")
             break
         else:
