@@ -17,7 +17,8 @@ def display_menu():
     print("9. One on One")
     print("10. Create Starting Lineup")
     print("11. View Starting Lineup")
-    print("12. Exit")
+    print("12. Amend Starting Lineup")
+    print("13. Exit")
 
 def display_roster(i, p, n):
         print("Viewing Database...")
@@ -122,6 +123,18 @@ def View_starting_lineup(l, p, n):
     for player in l:
         index = i.index(player)
         print(player + " - " + p[index] + " - " + n[index])
+    
+def ammend_starting_lineup(l, i, p, n):
+    print("Amending Starting Lineup...")
+    player_to_replace = input("Player to Replace: ")
+    new_player = input("New Player: ")
+
+    if player_to_replace in l and new_player in i:
+        index_to_replace = l.index(player_to_replace)
+        l[index_to_replace] = new_player
+        print("Starting lineup updated.")
+    else:
+        print("One or both players not found.")
 
 def run_system():
     print("BOOTING SYSTEM...")
@@ -159,6 +172,8 @@ def run_system():
         elif opt == "11":
             View_starting_lineup(l, p, n)
         elif opt == "12":
+            ammend_starting_lineup(l, i, p, n)
+        elif opt == "13":
             print("Exiting system...")
             break
         else:
