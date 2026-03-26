@@ -58,4 +58,13 @@ def search_player(i, p, n):
     else:
         print("Player not found.")
 
+def filter_by_nationality(i, p, n):
+    print("Filtering by Nationality...") 
+    nationality = input("Nationality: ")
+
+    print("Players  from " + nationality + ":")
+    for j in range(len(i)):
+        if n[j] == nationality:
+            print(i[j] + " - " + p[j]) 
+
 
