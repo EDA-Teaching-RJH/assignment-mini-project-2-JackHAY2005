@@ -39,4 +39,14 @@ def remove_player(i, p, n):
     else:
         print("Player not found.")
 
+def update_position(i, p):
+    print("Updating Position...")
+    name_to_update = input("Name: ")
+    if name_to_update in i:
+        index = i.index(name_to_update)
+        new_position = input("New Position: ")
+        p[index] = new_position
+    else:
+        print("Player not found.") 
+
 
