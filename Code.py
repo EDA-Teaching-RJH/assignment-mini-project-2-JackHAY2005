@@ -1,6 +1,7 @@
 i = ["Messi", "Ronaldo", "Neymar", "Bale", "Suarez"]
-p = ["RW", "ST", "LW", "CM", "CAM", "GK", "CB", "LB", "RB", "CDM"]
+p = ["RW", "ST", "LW", "LM", "ST"]
 n = ["Argentina", "Portugal", "Brazil", "Wales", "Uruguay"]
+v = [80, 75, 70, 65, 60]
 
 def display_menu():
     print("\n--- MENU ---")
@@ -24,9 +25,11 @@ def add_player(i, p, n):
     new_name = input("Name: ")
     new_position = input("Position: ")
     new_nationality = input("Nationality: ")
+    new_value = int(input("Value (in million pounds): "))
     i.append(new_name)
     p.append(new_position)
     n.append(new_nationality)
+    v.append(new_value)
 
 def remove_player(i, p, n):
     print("Removing Player...")
@@ -36,6 +39,7 @@ def remove_player(i, p, n):
         i.pop(index)
         p.pop(index)
         n.pop(index)
+        v.pop(index)
     else:
         print("Player not found.")
 
@@ -46,6 +50,7 @@ def update_position(i, p):
         index = i.index(name_to_update)
         new_position = input("New Position: ")
         p[index] = new_position
+        print("Position updated for " + i[index] + " to " + p[index])
     else:
         print("Player not found.") 
 
@@ -67,4 +72,9 @@ def filter_by_nationality(i, p, n):
         if n[j] == nationality:
             print(i[j] + " - " + p[j]) 
 
-
+def calculate_total_value(i):
+print("Calculating Total Value...")
+total_value = 0
+for value in v:
+    total_value += value
+print("Total Value: " + str(total_value) + " million pounds")
