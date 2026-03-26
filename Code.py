@@ -13,4 +13,8 @@ def display_menu():
     print("7. Calculate Total Value")
     print("9. Exit")
 display_menu()
-#
+
+def display_roster(i, p, n):
+        print("Viewing Database...")
+        for j in range(len(i)):
+            print(i[j] + " - " + p[j] + " - " + n[j])
