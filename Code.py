@@ -1,7 +1,8 @@
-i = ["Messi", "Ronaldo", "Neymar", "Bale", "Suarez"]
-p = ["RW", "ST", "LW", "LM", "ST"]
-n = ["Argentina", "Portugal", "Brazil", "Wales", "Uruguay"]
-v = [80, 75, 70, 65, 60]
+i = ["Messi", "Ronaldo", "Neymar", "Bale", "Suarez", "Mbappe", "Lewandowski", "Kane", "Salah", "De Bruyne"]
+p = ["RW", "ST", "LW", "LM", "ST", "ST", "ST", "ST", "RW", "CAM"]
+n = ["Argentina", "Portugal", "Brazil", "Wales", "Uruguay", "France", "Poland", "England", "Egypt", "Belgium"]
+v = [80, 75, 70, 65, 60, 90, 85, 80, 75, 70]
+l = []
 
 def display_menu():
     print("\n--- MENU ---")
@@ -15,7 +16,8 @@ def display_menu():
     print("8. Count World-Class Players")
     print("9. One on One")
     print("10. Create Starting Lineup")
-    print("11. Exit")
+    print("11. View Starting Lineup")
+    print("12. Exit")
 
 def display_roster(i, p, n):
         print("Viewing Database...")
@@ -107,14 +109,19 @@ def one_on_one(i, p, n):
 
 def create_starting_lineup(i, p, n):
     print("Creating Starting Lineup...")
-    lineup = []
     for j in range(11):
         player_name = input("Player " + str(j+1) + " Name: ")
         if player_name in i:
-            lineup.append(player_name)
+            l.append(player_name)
         else:
             print("Player not found. Please try again.")
             return
+
+def View_starting_lineup(l, p, n):
+    print("Starting Lineup:")
+    for player in l:
+        index = i.index(player)
+        print(player + " - " + p[index] + " - " + n[index])
 
 def run_system():
     print("BOOTING SYSTEM...")
@@ -122,7 +129,7 @@ def run_system():
     print("WELCOME TO THE FOOTBALL PLAYER DATABASE SYSTEM!")
 
     loading = 0
-    while loading < 10:
+    while loading < 12:
         loading += 1 # loop was not finished
         print("Loading module " + str(loading))
 
@@ -150,6 +157,8 @@ def run_system():
         elif opt == "10":
             create_starting_lineup(i, p, n)
         elif opt == "11":
+            View_starting_lineup(l, p, n)
+        elif opt == "12":
             print("Exiting system...")
             break
         else:
