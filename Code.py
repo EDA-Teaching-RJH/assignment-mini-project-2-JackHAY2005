@@ -49,4 +49,13 @@ def update_position(i, p):
     else:
         print("Player not found.") 
 
+def search_player(i, p, n):
+    print("Searching Player...")
+    name_to_search = input("Name: ")
+    if name_to_search in i:
+        index = i.index(name_to_search)
+        print(i[index] + " - " + p[index] + " - " + n[index])
+    else:
+        print("Player not found.")
+
 
