@@ -7,6 +7,17 @@ def save(players):
             writer.writeheader()
             for p in players:
                 writer.writerow(p.to_dict())
+
+def load():
+        players = []
+        try:
+            with open(FileManager.FILE, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    players.append(Player(row["name"], row["position"], row["nationality"], int(row["value"])))
+        except FileNotFoundError:
+            pass
+        return players
 # ==========================
 # OOP SECTION
 # ==========================
