@@ -8,6 +8,8 @@ def validate_name(name):
 def validate_position(position):
         return bool(re.match(r"^(GK|CB|LB|RB|LM|RM|CM|CAM|CDM|LW|RW|ST)$", position))
 
+def validate_value(value):
+        return value.isdigit() and int(value) > 0
 
 
 
