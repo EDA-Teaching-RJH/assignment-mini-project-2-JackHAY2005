@@ -48,6 +48,12 @@ def filter_nation(self):
             if p.nationality.lower() == nat.lower():
                 print(p)
 
+def total_value(self):
+        print(sum(p.value for p in self.players))
+
+def count_world_class(self):
+        print(sum(1 for p in self.players if p.is_world_class()))
+
 
 
 def run():
