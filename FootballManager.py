@@ -13,6 +13,24 @@ def __init__(self):
     def view(self):
         for p in self.players:
             print(p)
+        
+    def add(self):
+        name = input("Name: ")
+        position = input("Position: ")
+        nationality = input("Nationality: ")
+        value = input("Value: ")
+
+        if not Utils.validate_name(name):
+            print("Invalid name")
+            return
+        if not Utils.validate_position(position):
+            print("Invalid position")
+            return
+        if not Utils.validate_value(value):
+            print("Invalid value")
+            return
+
+        self.players.append(Player(name, position, nationality, int(value)))
 
 def run():
     system = FootballSystem()
