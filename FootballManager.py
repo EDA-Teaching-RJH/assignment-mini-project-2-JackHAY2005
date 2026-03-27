@@ -54,6 +54,17 @@ def total_value(self):
 def count_world_class(self):
         print(sum(1 for p in self.players if p.is_world_class()))
 
+def one_on_one(self):
+        player1 = input("Player 1: ")
+        player2 = input("Player 2: ")
+
+        player1 = next((p for p in self.players if p.name == player1), None)
+        player2 = next((p for p in self.players if p.name == player2), None)
+
+        if player1 and player2:
+            winner = player1 if player1.value > player2.value else player2
+            print(f"{winner.name} wins!")
+
 
 
 def run():
