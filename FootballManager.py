@@ -1,6 +1,15 @@
 import re
 import csv
 
+def save(players):
+        with open(FileManager.FILE, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=["name", "position", "nationality", "value"])
+            writer.writeheader()
+            for p in players:
+                writer.writerow(p.to_dict())
+# ==========================
+# OOP SECTION
+# ==========================
 class Person:
     def __init__(self, name, nationality):
         self.name = name
