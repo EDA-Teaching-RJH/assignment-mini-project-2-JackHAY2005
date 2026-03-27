@@ -1,14 +1,17 @@
 import re
 import csv
 
-
-def validate_name(name):
+class Utils:
+    @staticmethod
+    def validate_name(name):
         return bool(re.match(r"^[A-Za-z ]+$", name))
 
-def validate_position(position):
+    @staticmethod
+    def validate_position(position):
         return bool(re.match(r"^(GK|CB|LB|RB|LM|RM|CM|CAM|CDM|LW|RW|ST)$", position))
 
-def validate_value(value):
+    @staticmethod
+    def validate_value(value):
         return value.isdigit() and int(value) > 0
 
 
