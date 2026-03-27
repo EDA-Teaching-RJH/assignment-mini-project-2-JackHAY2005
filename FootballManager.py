@@ -1,3 +1,19 @@
+def __init__(self):
+        self.players = FileManager.load()
+        self.lineup = []
+
+        # preload if empty
+        if not self.players:
+            self.players = [
+                Player("Messi", "RW", "Argentina", 80),
+                Player("Ronaldo", "ST", "Portugal", 75),
+                Player("Mbappe", "ST", "France", 90)
+            ]
+
+    def view(self):
+        for p in self.players:
+            print(p)
+
 def run():
     system = FootballSystem()
 
