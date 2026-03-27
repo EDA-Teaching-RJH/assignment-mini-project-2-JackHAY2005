@@ -11,6 +11,9 @@ class Player(Person):
         super().__init__(name, nationality)
         self.position = position
         self.value = value
+    
+    def is_world_class(self):
+        return self.value >= 60
 
 # ==========================
 # CUSTOM UTILS (LIBRARY)
