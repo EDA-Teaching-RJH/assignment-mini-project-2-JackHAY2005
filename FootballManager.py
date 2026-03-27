@@ -187,6 +187,9 @@ class FootballSystem:
     def save(self):
         FileManager.save(self.players)
 
+# ==========================
+# TESTING
+# ==========================
 def run_tests():
     assert Utils.validate_name("Messi")
     assert not Utils.validate_name("Messi123")
