@@ -82,7 +82,39 @@ class FootballSystem:
             self.players = [
                 Player("Messi", "RW", "Argentina", 80),
                 Player("Ronaldo", "ST", "Portugal", 75),
-                Player("Mbappe", "ST", "France", 90)
+                Player("Mbappe", "ST", "France", 90),
+                Player("Neymar", "LW", "Brazil", 70),
+                Player("De Bruyne", "CM", "Belgium", 65),
+                Player("Van Dijk", "CB", "Netherlands", 60),
+                Player("Alisson", "GK", "Brazil", 55),
+                Player("Salah", "RW", "Egypt", 65),
+                Player("Kane", "ST", "England", 70),
+                Player("Modric", "CM", "Croatia", 50),
+                Player("Lewandowski", "ST", "Poland", 75)
+                Player("Hazard", "LW", "Belgium", 60)
+                Player("Griezmann", "CF", "France", 65)
+                Player("Kante", "CDM", "France", 55)
+                Player("Aubameyang", "ST", "Gabon", 50)
+                Player("Sane", "LW", "Germany", 45)
+                Player("Sterling", "RW", "England", 60)
+                Player("Mane", "LW", "Senegal", 65)
+                Player("Ramos", "CB", "Spain", 50)
+                Player("Kroos", "CM", "Germany", 55)
+                Player("Dybala", "CF", "Argentina", 50)
+                Player("Foden", "CM", "England", 45)
+                Player("Sancho", "RW", "England", 50)
+                Player("Verratti", "CM", "Italy", 55)
+                Player("Insigne", "LW", "Italy", 50)
+                Player("Grealish", "LM", "England", 45)
+                Player("Zlatan", "ST", "Sweden", 40)
+                Player("Pogba", "CM", "France", 55)
+                Player("Rashford", "ST", "England", 50)
+                Player("Muller", "CF", "Germany", 60)
+                Player("Kimmich", "CDM", "Germany", 55)
+                Player("Benzema", "ST", "France", 65)
+                Player("Erling", "ST", "Norway", 70)
+                Player("De Gea", "GK", "Spain", 50)
+                Player("Carvajal", "RB", "Spain", 45)
             ]
 
     def view(self):
