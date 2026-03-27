@@ -2,6 +2,11 @@ import re
 import csv
 
 
+    def validate_name(name):
+        return bool(re.match(r"^[A-Za-z ]+$", name))
+
+
+
 # ==========================
 # MAIN SYSTEM CLASS
 # ==========================
