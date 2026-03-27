@@ -1,14 +1,21 @@
 import re
 import csv
+# ==========================
+# FILE I/O
+# ==========================
+class FileManager:
+    FILE = "players.csv"
 
-def save(players):
+    @staticmethod
+    def save(players):
         with open(FileManager.FILE, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=["name", "position", "nationality", "value"])
             writer.writeheader()
             for p in players:
                 writer.writerow(p.to_dict())
 
-def load():
+    @staticmethod
+    def load():
         players = []
         try:
             with open(FileManager.FILE, "r") as f:
