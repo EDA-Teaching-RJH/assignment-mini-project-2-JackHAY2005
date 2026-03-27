@@ -1,1 +1,16 @@
 print("\n1.View 2.Add 3.Remove 4.Search 5.Filter 6.Total 7.WorldClass 8.1v1 9.Lineup 10.ViewLineup 11.Save 12.Tests 13.Exit")
+choice = input("Choice: ")
+
+        if choice == "1": system.view()
+        elif choice == "2": system.add()
+        elif choice == "3": system.remove()
+        elif choice == "4": system.search()
+        elif choice == "5": system.filter_nation()
+        elif choice == "6": system.total_value()
+        elif choice == "7": system.count_world_class()
+        elif choice == "8": system.one_on_one()
+        elif choice == "9": system.create_lineup()
+        elif choice == "10": system.view_lineup()
+        elif choice == "11": system.save()
+        elif choice == "12": run_tests()
+        elif choice == "13": break
