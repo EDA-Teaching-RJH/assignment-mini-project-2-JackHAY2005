@@ -1,6 +1,12 @@
 import re
 import csv
 
+def __init__(self, name, nationality):
+        self.name = name
+        self.nationality = nationality
+# ==========================
+# CUSTOM UTILS (LIBRARY)
+# ==========================
 class Utils:
     @staticmethod
     def validate_name(name):
@@ -13,10 +19,7 @@ class Utils:
     @staticmethod
     def validate_value(value):
         return value.isdigit() and int(value) > 0
-
-
-
-
+    
 # ==========================
 # MAIN SYSTEM CLASS
 # ==========================
