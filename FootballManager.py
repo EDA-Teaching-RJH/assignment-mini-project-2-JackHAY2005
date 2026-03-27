@@ -1,9 +1,17 @@
 import re
 import csv
 
-def __init__(self, name, nationality):
+class Person:
+    def __init__(self, name, nationality):
         self.name = name
         self.nationality = nationality
+
+class Player(Person):
+    def __init__(self, name, position, nationality, value):
+        super().__init__(name, nationality)
+        self.position = position
+        self.value = value
+
 # ==========================
 # CUSTOM UTILS (LIBRARY)
 # ==========================
