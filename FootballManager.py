@@ -72,6 +72,12 @@ def create_lineup(self):
             if any(p.name == name for p in self.players):
                 self.lineup.append(name)
 
+def view_lineup(self):
+        for name in self.lineup:
+            p = next(p for p in self.players if p.name == name)
+            print(p)
+
+
 
 
 
