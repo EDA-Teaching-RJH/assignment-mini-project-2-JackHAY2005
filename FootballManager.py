@@ -65,6 +65,15 @@ def one_on_one(self):
             winner = player1 if player1.value > player2.value else player2
             print(f"{winner.name} wins!")
 
+def create_lineup(self):
+        self.lineup = []
+        for _ in range(11):
+            name = input("Player: ")
+            if any(p.name == name for p in self.players):
+                self.lineup.append(name)
+
+
+
 
 
 def run():
