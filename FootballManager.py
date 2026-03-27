@@ -1,3 +1,10 @@
+import re
+import csv
+
+
+# ==========================
+# MAIN SYSTEM CLASS
+# ==========================
 class FootballSystem:
     def __init__(self):
         self.players = FileManager.load()
@@ -81,10 +88,9 @@ class FootballSystem:
     def save(self):
         FileManager.save(self.players)
 
-
-
-
-
+# ==========================
+# CLI
+# ==========================
 def run():
     system = FootballSystem()
 
