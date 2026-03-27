@@ -10,11 +10,11 @@ def __init__(self):
                 Player("Mbappe", "ST", "France", 90)
             ]
 
-    def view(self):
+def view(self):
         for p in self.players:
             print(p)
         
-    def add(self):
+def add(self):
         name = input("Name: ")
         position = input("Position: ")
         nationality = input("Nationality: ")
@@ -36,11 +36,19 @@ def remove(self):
         name = input("Name: ")
         self.players = [p for p in self.players if p.name != name]
 
-    def search(self):
+def search(self):
         name = input("Search: ")
         for p in self.players:
             if p.name.lower() == name.lower():
                 print(p)
+
+def filter_nation(self):
+        nat = input("Nationality: ")
+        for p in self.players:
+            if p.nationality.lower() == nat.lower():
+                print(p)
+
+
 
 def run():
     system = FootballSystem()
