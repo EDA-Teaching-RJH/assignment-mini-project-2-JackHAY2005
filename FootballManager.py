@@ -22,6 +22,9 @@ class Player(Person):
             "nationality": self.nationality,
             "value": self.value
         }
+    
+    def __str__(self):
+        return f"{self.name} - {self.position} - {self.nationality} (£{self.value}m)"
 
 # ==========================
 # CUSTOM UTILS (LIBRARY)
