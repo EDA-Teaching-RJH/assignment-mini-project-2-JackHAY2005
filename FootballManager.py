@@ -1,4 +1,5 @@
-def __init__(self):
+class FootballSystem:
+    def __init__(self):
         self.players = FileManager.load()
         self.lineup = []
 
@@ -10,11 +11,11 @@ def __init__(self):
                 Player("Mbappe", "ST", "France", 90)
             ]
 
-def view(self):
+    def view(self):
         for p in self.players:
             print(p)
         
-def add(self):
+    def add(self):
         name = input("Name: ")
         position = input("Position: ")
         nationality = input("Nationality: ")
@@ -32,29 +33,29 @@ def add(self):
 
         self.players.append(Player(name, position, nationality, int(value)))
 
-def remove(self):
+    def remove(self):
         name = input("Name: ")
         self.players = [p for p in self.players if p.name != name]
 
-def search(self):
+    def search(self):
         name = input("Search: ")
         for p in self.players:
             if p.name.lower() == name.lower():
                 print(p)
 
-def filter_nation(self):
+    def filter_nation(self):
         nat = input("Nationality: ")
         for p in self.players:
             if p.nationality.lower() == nat.lower():
                 print(p)
 
-def total_value(self):
+    def total_value(self):
         print(sum(p.value for p in self.players))
 
-def count_world_class(self):
+    def count_world_class(self):
         print(sum(1 for p in self.players if p.is_world_class()))
 
-def one_on_one(self):
+    def one_on_one(self):
         player1 = input("Player 1: ")
         player2 = input("Player 2: ")
 
@@ -65,19 +66,19 @@ def one_on_one(self):
             winner = player1 if player1.value > player2.value else player2
             print(f"{winner.name} wins!")
 
-def create_lineup(self):
+    def create_lineup(self):
         self.lineup = []
         for _ in range(11):
             name = input("Player: ")
             if any(p.name == name for p in self.players):
                 self.lineup.append(name)
 
-def view_lineup(self):
+    def view_lineup(self):
         for name in self.lineup:
             p = next(p for p in self.players if p.name == name)
             print(p)
 
-def save(self):
+    def save(self):
         FileManager.save(self.players)
 
 
