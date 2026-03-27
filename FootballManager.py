@@ -14,6 +14,14 @@ class Player(Person):
     
     def is_world_class(self):
         return self.value >= 60
+    
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "position": self.position,
+            "nationality": self.nationality,
+            "value": self.value
+        }
 
 # ==========================
 # CUSTOM UTILS (LIBRARY)
