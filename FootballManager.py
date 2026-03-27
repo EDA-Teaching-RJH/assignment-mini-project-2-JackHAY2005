@@ -32,6 +32,16 @@ def __init__(self):
 
         self.players.append(Player(name, position, nationality, int(value)))
 
+def remove(self):
+        name = input("Name: ")
+        self.players = [p for p in self.players if p.name != name]
+
+    def search(self):
+        name = input("Search: ")
+        for p in self.players:
+            if p.name.lower() == name.lower():
+                print(p)
+
 def run():
     system = FootballSystem()
 
