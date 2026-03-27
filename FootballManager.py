@@ -77,6 +77,8 @@ def view_lineup(self):
             p = next(p for p in self.players if p.name == name)
             print(p)
 
+def save(self):
+        FileManager.save(self.players)
 
 
 
