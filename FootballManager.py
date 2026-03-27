@@ -1,5 +1,9 @@
-print("\n1.View 2.Add 3.Remove 4.Search 5.Filter 6.Total 7.WorldClass 8.1v1 9.Lineup 10.ViewLineup 11.Save 12.Tests 13.Exit")
-choice = input("Choice: ")
+def run():
+    system = FootballSystem()
+
+    while True:
+        print("\n1.View 2.Add 3.Remove 4.Search 5.Filter 6.Total 7.WorldClass 8.1v1 9.Lineup 10.ViewLineup 11.Save 12.Tests 13.Exit")
+        choice = input("Choice: ")
 
         if choice == "1": system.view()
         elif choice == "2": system.add()
@@ -14,3 +18,5 @@ choice = input("Choice: ")
         elif choice == "11": system.save()
         elif choice == "12": run_tests()
         elif choice == "13": break
+
+run()
