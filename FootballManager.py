@@ -187,6 +187,21 @@ class FootballSystem:
     def save(self):
         FileManager.save(self.players)
 
+def run_tests():
+    assert Utils.validate_name("Messi")
+    assert not Utils.validate_name("Messi123")
+
+    assert Utils.validate_position("ST")
+    assert not Utils.validate_position("XYZ")
+
+    testplayer = Player("Test", "ST", "Test", 70)
+    assert testplayer.is_world_class()
+
+    system = FootballSystem()
+    system.players.append(testplayer)
+    system.save()
+
+    print("Tests passed")
 # ==========================
 # CLI
 # ==========================
