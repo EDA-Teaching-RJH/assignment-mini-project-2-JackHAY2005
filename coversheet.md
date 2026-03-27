@@ -1,3 +1,4 @@
+
 # Mini Project 2
 
 
@@ -36,4 +37,3 @@ There is an additional 10 marks available for adding suitable comments added to 
 | Coding Principles | /90 |
 |--|--|
 | **Comments**  |  **/10**|
-
